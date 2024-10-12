@@ -12,8 +12,10 @@ public class Main {
         LinkedList<Place>placeToVisit=new LinkedList<>();
         Place tokat=new Place("TOKAT",550);
         Place trabzon=new Place("TRABZON",840);
+        Place trabzon1=new Place("trabzon",840);
         add(placeToVisit,tokat);
         add(placeToVisit,trabzon);
+        add(placeToVisit,trabzon1);
         System.out.println(placeToVisit);
     }
 
@@ -24,6 +26,12 @@ public class Main {
         if(list.contains(place)){
             System.out.println("found duplicate place..."+place);
             return;
+        }
+        for(Place p :list){
+            if(p.name().equalsIgnoreCase(place.name())){
+                System.out.println("Found duplicate :"+place);
+                return;
+            }
         }
         list.add(place);
     }
