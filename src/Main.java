@@ -11,7 +11,9 @@ public class Main {
     public static void main(String[] args) {
         LinkedList<Place>placeToVisit=new LinkedList<>();
         Place tokat=new Place("TOKAT",550);
+        Place trabzon=new Place("TRABZON",840);
         add(placeToVisit,tokat);
+        add(placeToVisit,trabzon);
         System.out.println(placeToVisit);
     }
 
